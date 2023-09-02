@@ -1,0 +1,47 @@
+//Development= node.js  server + react server
+
+//Production = node.js server + static react files
+
+
+-------------------------------------------server------------------------------------------------------
+command:cd server
+command: npm init 
+command: npm install express --save
+//nodemon package help us to make changes while the server is running
+command: npm add nodemon --save-dev
+
+//in package.json add {"script" : {"dev": "nodemon index.js"}} which will run 
+//command: nodemon index.js 
+//when we run 
+//command: npm run dev 
+
+
+-------------------------------------------client------------------------------------------------------
+command: npx create-react-app client
+command: cd client
+command: npm start
+
+//react-router-dom package helps us to do routning on front end
+command: npm add react-router-dom
+
+
+
+
+-------------------------------------------mongodb------------------------------------------------------
+//download mongodb server 
+command: sudo dpkg -i [package_name]
+command: sudo systemctl status mongod
+command: sudo systemctl start mongod
+
+//download mongod shell interface client
+command: sudo dpkg -i [package_name]
+command: mongosh
+
+-------------------------------------------Features and improvements------------------------------------------------------
+//improve request types to put and get from only post
+//improve ui
+//add popups
+//add email login
+//import svgs
+//what is redux
+// use of axios
