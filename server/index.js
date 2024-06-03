@@ -25,7 +25,15 @@ app.use(cors());
 app.use(express.json());
 
 //connection to database
-mongoose.connect("mongodb://localhost:27017/bankdb");
+// mongoose.connect("mongodb://localhost:27017/bankdb");
+mongoose.connect(process.env.MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("Connected to MongoDB Atlas");
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
 
 app.post("/api/signup", signup);
 app.post("/api/login", login);
